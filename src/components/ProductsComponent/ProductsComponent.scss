@@ -1,0 +1,105 @@
+@use "../../Sass/Variable" as *;
+
+.products-component {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    row-gap: 70px;
+    column-gap: 15px;
+    padding-block: 50px;
+}
+
+.main-container>h2 {
+    padding-block: 15px;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: $mainColor;
+}
+
+.main-container>h3 {
+    margin-block: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.products-component .product {
+    background-color: #fffefe;
+    position: relative;
+    min-height: 500px;
+    border-radius: 15px;
+}
+
+.products-component .product img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.products-component .product .content {
+    height: 100%;
+    padding: 20px 15px 30px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-component .product .content h4 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: $SecoundColor;
+}
+
+.products-component .product .content h4+p {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.products-component .product .content .price {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.products-component .product .content .price p {
+    padding: 10px 15px;
+    border: 1px solid $SecoundColor;
+}
+
+.products-component .product .content .btn {
+    display: flex;
+    gap: 25px;
+    font-size: 22px;
+    justify-content: center;
+}
+
+.products-component .product .content .btn span,
+.products-component .product .content .btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $SecoundColor;
+    padding: 8px 15px;
+    color: $SecoundColor;
+}
+
+.products-component .product .content .btn span {
+    cursor: pointer;
+}
+
+.showMore {
+    display: block;
+    width: fit-content;
+    margin: 10px auto 30px auto;
+    background-color: $mainColor;
+    color: $SecoundColor;
+    padding: 15px 30px;
+    border-radius: 15px;
+}

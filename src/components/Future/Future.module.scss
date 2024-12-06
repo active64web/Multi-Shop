@@ -1,0 +1,22 @@
+@use "../../Sass/Variable" as *;
+
+.future {
+    margin-block: 60px;
+}
+
+.future .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 15px;
+}
+
+.future .box .item {
+    background-color: #FFF;
+    padding: 25px;
+    text-align: center;
+}
+
+.future .box .item svg {
+    font-size: 35px;
+    color: $mainColor;
+}

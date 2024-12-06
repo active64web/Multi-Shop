@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body,
+button {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.main-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@media (min-width: 992px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+
+.react-multi-carousel-dot-list {
+    bottom: 13px !important;
+    z-index: 3
+}
+
+.react-multi-carousel-dot button {
+    width: 20px !important;
+    height: 15px !important;
+    border-radius: 0 !important;
+    border: 1px solid #FFF !important;
+    background-color: transparent !important;
+}
+
+.react-multi-carousel-dot--active button {
+    background-color: #FFF !important;
+    width: 30px !important;
+}

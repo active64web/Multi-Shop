@@ -1,0 +1,94 @@
+@use "../../Sass/Variable" as *;
+
+.login {
+    overflow: hidden;
+}
+
+.login .container {
+    min-height: calc(100vh - 199px);
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.login .container .box {
+    min-height: 500px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .container .box .form {
+    padding: 25px;
+    background-color: $SecoundColor;
+    min-height: 500px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    form {
+        width: 100%;
+
+        input {
+            display: block;
+            margin: auto;
+            font-size: 18px;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            outline: none;
+            border: none;
+        }
+
+        input[type=submit] {
+            width: fit-content;
+            background-color: $mainColor;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 150px;
+        }
+    }
+
+    a {
+        color: $mainColor;
+        text-transform: uppercase;
+        position: absolute;
+        left: 25px;
+        bottom: 25px;
+        font-size: 20px;
+    }
+}
+
+.login .box .image {
+    width: 50%;
+    min-height: 500px;
+    background-color: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        font-size: 70px;
+        color: $SecoundColor;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+.login .notFound {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 25px;
+    background-color: $mainColor;
+    color: $SecoundColor;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid $SecoundColor;
+    border-radius: 15px;
+    transition: all .4s;
+}

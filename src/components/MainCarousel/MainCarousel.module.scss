@@ -1,0 +1,151 @@
+@use '../../Sass/Variable' as *;
+
+.mainCarousel .box {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.mainCarousel .box .carousel {
+    width: 70%;
+    position: relative;
+}
+
+.mainCarousel .box .carousel .item {
+    position: relative;
+    height: 450px;
+}
+
+.mainCarousel .box .carousel .item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(80 80 80 / 30%);
+    z-index: 2;
+}
+
+.mainCarousel .box .carousel .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainCarousel .box .carousel .item .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    z-index: 4;
+    color: #FFF;
+
+}
+
+.mainCarousel .box .carousel .item .content h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.mainCarousel .box .carousel .item .content p {
+    font-size: 18px;
+}
+
+.mainCarousel .box .carousel .item .content a {
+    display: block;
+    color: #FFF;
+    border: 1px solid #FFF;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 15px auto;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+.mainCarousel .box .offer {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mainCarousel .box .offer .offerItem {
+    height: 217.5px;
+    position: relative;
+}
+
+.mainCarousel .box .offer .offerItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(80 80 80 / 30%);
+}
+
+.mainCarousel .box .offer .offerItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainCarousel .box .offer .offerItem .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    text-align: center;
+}
+
+.mainCarousel .box .offer .offerItem .content span {
+    font-size: 18px;
+}
+
+.mainCarousel .box .offer .offerItem .content p {
+    font-size: 22px;
+}
+
+.mainCarousel .box .offer .offerItem .content a {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    color: $SecoundColor;
+    background-color: $mainColor;
+    padding: 8px 15px;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+@media (max-width: 991px) {
+    .mainCarousel .box {
+        flex-direction: column;
+    }
+
+    .mainCarousel .carousel {
+        width: 100% !important;
+    }
+
+    .mainCarousel .offer {
+        flex-direction: row !important;
+        width: auto !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .mainCarousel .offerItem .content {
+        width: 100%;
+    }
+
+    .mainCarousel .offerItem span {
+        font-size: 16px !important;
+    }
+
+    .mainCarousel .offerItem p {
+        font-size: 19px !important;
+    }
+}

@@ -1,0 +1,115 @@
+@use "../../Sass/Variable" as *;
+
+.footer {
+    background-color: $SecoundColor;
+    color: #FFF;
+    margin-top: 40px;
+}
+
+.footer .content {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+
+.footer .content h3 {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer .content .touch {
+    margin-bottom: 15px;
+
+    p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+        font-size: 17px;
+
+        svg {
+            color: $mainColor;
+        }
+    }
+}
+
+.quickShop,
+.myAccount {
+    margin-bottom: 15px;
+
+    a {
+        color: #FFF;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 10px;
+        width: fit-content;
+        font-size: 17px;
+    }
+}
+
+.follow .links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.follow a {
+    color: $SecoundColor;
+    background-color: $mainColor;
+    padding: 10px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyRight {
+    padding: 30px;
+    font-size: 18px;
+    border-top: 1px solid #ffffff2f;
+
+    p {
+        text-align: center;
+
+        span {
+            color: $mainColor;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .footer .content {
+        text-align: center;
+    }
+
+    .footer .touch {
+        p {
+            justify-content: center;
+        }
+    }
+
+    .quickShop,
+    .myAccount {
+        a {
+            width: auto !important;
+            justify-content: center;
+
+            svg {
+                display: none;
+            }
+        }
+    }
+
+    .follow .links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .copyRight {
+        font-size: 15px !important;
+    }
+}
